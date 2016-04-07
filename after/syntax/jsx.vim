@@ -63,22 +63,22 @@ syn cluster javascriptNoReserved add=jsxRegion
 " The default xml syntax doesn't match tag names on end tags.
 " This will create a new syntax group called xmlEndTagName.
 syn match xmlEndTagName
-    \ +[</]\@<=[^ /!?<>"']\++
-    \ contained
-    \ contains=xmlNamespace,xmlAttribPunct
-    \ display
+  \ +[</]\@<=[^ /!?<>"']\++
+  \ contained
+  \ contains=xmlNamespace,xmlAttribPunct
+  \ display
 
 
 if exists('g:xml_syntax_folding')
   syn match xmlEndTag
-	\ +</[^ /!?<>"']\+>+
-	\ contained
-	\ contains=xmlEndTagName
+    \ +</[^ /!?<>"']\+>+
+    \ contained
+    \ contains=xmlEndTagName
 
 else
 
   syn match xmlEndTag
-	\ +</[^ /!?<>"']\+>+
-	\ contains=xmlEndTagName
+    \ +</[^ /!?<>"']\+>+
+    \ contains=xmlEndTagName
 
 endif
